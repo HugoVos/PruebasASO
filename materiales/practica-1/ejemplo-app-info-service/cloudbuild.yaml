@@ -23,8 +23,8 @@ steps:
       - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/app-info-service'
   # Paso 3: Actualizar cloud run para la nueva imagen 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
     args:
-      entrypoint: gcloud
       - 'run'
       - 'deploy'
       - 'app-info-service'
