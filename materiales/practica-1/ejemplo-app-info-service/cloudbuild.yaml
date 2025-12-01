@@ -28,6 +28,10 @@ steps:
       - 'run'
       - 'deploy'
       - 'app-info-service'
+      - '--region'
+      - '${_REGION}'
+      - '--platform'
+      - 'managed'
       - '--image'
       - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO_NAME}/app-info-service:${BUILD_ID}'
 
